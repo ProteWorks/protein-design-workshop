@@ -1,0 +1,22 @@
+version: 1
+sequences:
+  -
+    protein:
+      id: A
+      sequence: QVQLVQSGAEVKKPGSSVKVSCKASGGTFSSYAISWVRQAPGQGLEWMGGIIPIFGTANYAQKFQGRVTITADESTSTAYMELRSLRSDDTAVYYCARDNLGYCSGGSCYSDYYYYYMDVWGQGTLVTVSSGG
+      msa: ./multimer_no_template_0.csv
+  -
+    protein:
+      id: B
+      sequence: ASNFMLTQPRSVSESPGKTVTISCTRSSGSIGSDYVHWYQQRPGSSPTTVIYEDNQRPSGVPDRFSGSIDSSSNSASLTISGLKTEDEADYYCQSYDRSNHEVVFGGGTKLTVLENLYF
+      msa: ./multimer_no_template_1.csv
+  -
+    protein:
+      id: C
+      sequence: IVCHTTATSPISAVTCPPGENLCYRKMWCDAFCSSRGKVVELGCAATCPSKKPYEEVTCCSTDKCNPHPKQRP
+      msa: ./multimer_no_template_2.csv
+templates:
+  -
+    pdb: ./9HUB.pdb
+    force: true
+    threshold: 1.5
