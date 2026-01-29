@@ -1,1 +1,1 @@
-boltz predict multimer_no_template.yaml --cache /weights/boltz/
+boltz predict multimer_no_template.yaml --cache ~/data/boltz/

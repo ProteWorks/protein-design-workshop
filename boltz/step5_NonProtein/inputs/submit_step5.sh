@@ -1,1 +1,1 @@
-boltz predict non_protein.yaml --cache /weights/boltz/ 
+boltz predict non_protein.yaml --cache ~/data/boltz/
