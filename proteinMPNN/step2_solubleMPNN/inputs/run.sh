@@ -1,5 +1,5 @@
 python ~/repos/LigandMPNN/run.py\
-	--pdb_path 8zga.pdb\
+	--pdb_path 8zgz.pdb\
 	--out_folder testout/\
 	--model_type soluble_mpnn\
 	--pack_side_chains 1\
