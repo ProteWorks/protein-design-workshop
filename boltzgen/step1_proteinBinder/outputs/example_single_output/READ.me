@@ -1,0 +1,30 @@
+Files in this folder:
+
+1g13prot.cif: The input structure
+steps.yaml: All of the steps of the process that were run with references to the yaml file for the settings used in that step.
+configs/: All the config files referenced in the steps.yaml. These are mostly useful when reviewing old jobs to reference the settings you used.
+final_ranked_designs/: This is the key directory which contains the results you actually are about. 
+final_ranked_designs/all_design_metrics.csv: The metrics for all the designs that were analyzed
+final_ranked_designs/final_design_metrics_1.csv: The metrics for the designs which were part of the final selection
+final_ranked_designs/intermediate_ranked_10_designs/: The top designs ranked solely by quality. Does not include the diversity filters.
+final_ranked_designs/results_overview.pdf: A pdf report with various design metrics and plots.
+final_ranked_designs/final_1_designs/: A directory containing the actual output structures before and after refolding.
+intermediate_designs_inverse_folded/: Various peices of data related to intermediate designs and the inverse folding (sequence design) step. Primarily used for debugging. Refolded monomer designs are also found here.
+previous-config-1/: Similar to configs/ but if you run multiple jobs with the same output the configs for each different run will be stored here. Useful for when you want to try different settings but treat all the outputs as one set for filtering.
+
+Open final_ranked_designs/final_1_designs/rank1_1g13prot.cif as well as the version in final_ranked_designs/final_1_designs/before_refolding/ in a molecular viewer.
+Open intermediate_designs_inverse_folded/refold_cif/1g13prot.cif and align to the first structure. How does it compare? Based on your own intuition do you think this structure would make for a good design?
+Are the structures similar? 
+Open final_ranked_designs/final_designs_metrics_1.csv in a spreadsheet viewer. 
+How is the iPTM of this design?
+Does this design pass the filters?
+
+Some good thresholds to check include:
+iPTM > 0.5
+iPAE < 15
+min iPAE < 5
+
+These are notes from Joshua Hull in the bindcraft slack chanel:
+For BoltzGen specifically, I look for ipTM >0.5, iPAE <15, min iPAE <5 in the candidates I'm trying to evaluate on mean. These metrics don't seem to be 1:1 translatable to other models but by expert examination and model cross validation (eg Boltz2/AF2/AF3 refolding) seem good. I think min iPAE is too optimistic compared to earlier RFD/Bindcraft deployments and total PAE is far too pessimistic.
+
+We should also note that some deployments of boltzgen produce iPTM values significantly below other refolding methods for the same structure. These should be independently validated with another structure prediction tool (such as boltz)
