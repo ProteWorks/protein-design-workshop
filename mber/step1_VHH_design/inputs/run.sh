@@ -1,0 +1,11 @@
+#HF_HOME=/mnt/data/mber/huggingface/ \
+mber-vhh \
+	--input-pdb PDL1.pdb\
+	--output-dir vhh_pdl1_A56\
+	--chains A\
+	--hotspots A56\
+	#--num-accepted 1\
+	#--max-trajectories 1\
+	#--af-params-dir /mnt/data/AlphaFold2/\
+	#--nbb2-weights-dir /mnt/data/mber/nbb2_weights/\
+	#--hf-home /mnt/data/mber/huggingface/
